@@ -166,22 +166,22 @@
 // }
 
 // ****************************Promise.all********************************************************
-const p1 = new Promise(function (resolve, reject) {
-  setTimeout(() => {
-    resolve("P1 success");
-  }, 3000);
-});
-const p2 = new Promise(function (resolve, reject) {
-  setTimeout(() => {
-    // resolve("P2 success");
-    reject("p2 fails");
-  }, 1000);
-});
-const p3 = new Promise(function (resolve, reject) {
-  setTimeout(() => {
-    resolve("P3 success");
-  }, 2000);
-});
+// const p1 = new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//     resolve("P1 success");
+//   }, 3000);
+// });
+// const p2 = new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//     // resolve("P2 success");
+//     reject("p2 fails");
+//   }, 1000);
+// });
+// const p3 = new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//     resolve("P3 success");
+//   }, 2000);
+// });
 
 // ************Promise.all**************
 // Promise.all([p1, p2, p3])
@@ -658,3 +658,27 @@ function does not effect  the values of a and b*/
 //   return clone;
 // }
 // console.log(deepclone(obj));
+
+/*********Accessing using dot notaion and bracket notation*****/
+// const object1 = { ashish: 1, sanju: 2, kripa: 3 };
+// console.log(object1.ashish);
+
+// **when to use dot notation**
+
+// -When the property name is stored in a variable.
+// -When the property name has special characters or spaces.
+// -When you want to dynamically access a property.
+
+/*Property name is a dynamic from a variable*/
+// const name3 = "kripa";
+// console.log(object1[name3]);
+
+// Property name has spaces/special characters
+// const weirdObject = { "first name": "Bob" };
+// console.log(weirdObject["first name"]);
+
+// Situation                                                           | Use Dot Notation | Use Square Brackets
+// Property name is a valid identifier                                   | ✅                   | ✅
+// Property name is dynamic (from a variable)                            | ❌                   | ✅
+// Property name has spaces/special characters                           | ❌                  | ✅
+// You prefer cleaner, more readable syntax                              | ✅                   | ❌ (unless needed)
