@@ -658,12 +658,24 @@ function does not effect  the values of a and b*/
 //   return clone;
 // }
 // console.log(deepclone(obj));
+//  *******New method(Structured Clone)************************
+// const original = {
+//     name: "Alice",
+//     address: { city: "Delhi" }
+//   };
+
+//   const deepCopy = structuredClone(original);
+
+//   deepCopy.address.city = "Mumbai";
+
+//   console.log(original.address.city);
+// Creates a copy of all levels, including nested objects.Changes to the copy do not affect the original at all.
 
 /*********Accessing using dot notaion and bracket notation*****/
 // const object1 = { ashish: 1, sanju: 2, kripa: 3 };
 // console.log(object1.ashish);
 
-// **when to use dot notation**
+// **when not to use dot notation**
 
 // -When the property name is stored in a variable.
 // -When the property name has special characters or spaces.
@@ -682,3 +694,20 @@ function does not effect  the values of a and b*/
 // Property name is dynamic (from a variable)                            | ❌                   | ✅
 // Property name has spaces/special characters                           | ❌                  | ✅
 // You prefer cleaner, more readable syntax                              | ✅                   | ❌ (unless needed)
+
+/*******usestrict */
+// "use strict";
+// mstr = "bob";
+// console.log(mstr);
+
+//check validity of email using indexof
+// function chackvalidemail(emailid) {
+//   if (emailid.indexOf("@") > 0) {
+//     return "valid";
+//   } else {
+//     return "invalid";
+//   }
+// }
+// console.log(chackvalidemail("@123"));
+
+// Hoiesting
