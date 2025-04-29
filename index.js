@@ -364,6 +364,7 @@ function does not effect  the values of a and b*/
 //   console.log(anyvar);
 //   var anyvar = "Crio";
 //   console.log(anyvar);
+//   return anyvar;
 // }
 // printNumbers();
 // console.log(printNumbers());
@@ -711,3 +712,50 @@ function does not effect  the values of a and b*/
 // console.log(chackvalidemail("@123"));
 
 // Hoiesting
+
+// ******Application of regex******
+// 1.//
+// function reverseWords(str) {
+//   // Remove extra spaces and split into words
+//   const words = str.trim().replace(/\s+/g, " ").split(" ");
+//   // Reverse the words and join them
+//   return words.reverse().join(" ");
+// }
+
+// console.log(reverseWords("   hello   world    this is     JS   "));
+
+// Explanation
+// .replace(/\s+/g, ' ')
+
+// \s+ — matches one or more spaces.
+
+// g — global, so all matches.
+
+// It replaces multiple spaces with a single space.
+
+// Then .split(' ') splits normally by single spaces.
+
+// 2.>>>
+// function reverseWords(str) {
+//   // Step 1: Replace non-alphanumeric characters with space
+//   let cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, " ");
+
+//   // Step 2: Remove extra spaces
+//   cleaned = cleaned.trim().replace(/\s+/g, " ");
+
+//   // Step 3: Split into words, reverse and join
+//   return cleaned.split(" ").reverse().join(" ");
+// }
+
+// // Example:
+// console.log(reverseWords(" Hello, World! 123   is GREAT!!! "));
+
+//Explanation
+// .replace(/[^a-z0-9]/g, " ")
+// ➔ Replace everything that's not a letter or number with a space.
+
+// .trim().replace(/\s+/g, " ")
+// ➔ Remove leading/trailing spaces and reduce multiple spaces to one.
+
+// .split(" ").reverse().join(" ")
+// ➔ Split by space, reverse words, and rejoin.
